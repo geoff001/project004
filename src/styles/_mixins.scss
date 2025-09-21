@@ -32,6 +32,11 @@
   justify-content: center;
 }
 
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
 @mixin flex-between {
   display: flex;
   align-items: center;
@@ -41,6 +46,12 @@
 @mixin flex-column {
   display: flex;
   flex-direction: column;
+}
+
+@mixin flex-row-align-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @mixin flex-column-center {
@@ -197,7 +208,7 @@
   }
 }
 
-// Dark Mode Mixin
+// Dark Theme Mixin
 @mixin dark-mode {
   @media (prefers-color-scheme: dark) {
     @content;

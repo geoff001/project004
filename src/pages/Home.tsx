@@ -1,7 +1,6 @@
-import Link from "next/link";
 import Layout from "../components/Layout";
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout currentPage="home">
       <div className="home-content">
@@ -9,12 +8,9 @@ export default function Home() {
         <p className="home-description">
           This is a simple Next.js application built with TypeScript and Sass.
         </p>
-        <div className="home-cta">
-          {/* <Link href="/about" className="btn-primary">
-            Learn More About Us
-          </Link> */}
-        </div>
       </div>
     </Layout>
   );
-}
+};
+
+export default Home;

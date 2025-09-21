@@ -6,7 +6,7 @@ interface LayoutProps {
   currentPage?: string;
 }
 
-export default function Layout({ children, currentPage }: LayoutProps) {
+const Layout = ({ children, currentPage }: LayoutProps) => {
   return (
     <div className="page-container">
       <Header currentPage={currentPage} />
@@ -16,4 +16,6 @@ export default function Layout({ children, currentPage }: LayoutProps) {
       <Footer />
     </div>
   );
-}
+};
+
+export default Layout;
