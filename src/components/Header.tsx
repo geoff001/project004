@@ -1,26 +1,33 @@
-import Link from "next/link";
+import NavLink from "./NavLink";
+import { faHome, faInfoCircle, faFootball } from "@fortawesome/free-solid-svg-icons";
 
 interface HeaderProps {
   currentPage?: string;
 }
 
-export default function Header({ currentPage }: HeaderProps) {
+const Header = ({ currentPage }: HeaderProps) => {
   return (
     <header className="header">
-      <nav className="nav">
-        {/* <Link 
-          href="/" 
-          className={`nav-link ${currentPage === 'home' ? 'active' : ''}`}
-        >
-          Home
-        </Link>
-        <Link 
-          href="/about" 
-          className={`nav-link ${currentPage === 'about' ? 'active' : ''}`}
-        >
-          About
-        </Link> */}
-      </nav>
+      <div className="header-container no-wrap">
+        <div className="header-layout">
+          <button className="header-logo">LOGO HERE</button>
+          <div className="header-links">
+            <nav className="nav">
+              <NavLink href="/" currentPage={currentPage} icon={faHome}>
+                Home
+              </NavLink>
+              <NavLink href="/sportsbook" currentPage={currentPage} icon={faFootball}>
+                Sportsbook
+              </NavLink>
+              <NavLink href="/about" currentPage={currentPage} icon={faInfoCircle}>
+                About
+              </NavLink>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;

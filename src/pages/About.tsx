@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 
-export default function About() {
+const About = () => {
   return (
     <Layout currentPage="about">
       <div className="about-content">
@@ -39,4 +39,6 @@ export default function About() {
       </div>
     </Layout>
   );
-}
+};
+
+export default About;
