@@ -15,15 +15,15 @@ $border-dark: #333;
 $font-family-base: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 $font-family-mono: 'Geist Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
 
-$font-size-xs: 0.75rem;
-$font-size-sm: 0.875rem;
-$font-size-base: 1rem;
-$font-size-lg: 1.125rem;
-$font-size-xl: 1.25rem;
-$font-size-2xl: 1.5rem;
-$font-size-3xl: 1.875rem;
-$font-size-4xl: 2.25rem;
-$font-size-5xl: 3rem;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+$font-size-4xl: 36px;
+$font-size-5xl: 48px;
 
 $font-weight-normal: 400;
 $font-weight-medium: 500;
@@ -35,13 +35,13 @@ $line-height-normal: 1.5;
 $line-height-relaxed: 1.625;
 
 // Spacing
-$spacing-xs: 0.25rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
-$spacing-xl: 2rem;
-$spacing-2xl: 3rem;
-$spacing-3xl: 4rem;
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+$spacing-3xl: 64px;
 
 // Breakpoints
 $breakpoint-sm: 640px;
@@ -50,10 +50,10 @@ $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
 
 // Border radius
-$border-radius-sm: 0.25rem;
-$border-radius-md: 0.5rem;
-$border-radius-lg: 0.75rem;
-$border-radius-xl: 1rem;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
 
 // Shadows
 $shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);

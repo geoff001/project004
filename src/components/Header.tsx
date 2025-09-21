@@ -8,7 +8,7 @@ export default function Header({ currentPage }: HeaderProps) {
   return (
     <header className="header">
       <nav className="nav">
-        <Link 
+        {/* <Link 
           href="/" 
           className={`nav-link ${currentPage === 'home' ? 'active' : ''}`}
         >
@@ -19,7 +19,7 @@ export default function Header({ currentPage }: HeaderProps) {
           className={`nav-link ${currentPage === 'about' ? 'active' : ''}`}
         >
           About
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );
