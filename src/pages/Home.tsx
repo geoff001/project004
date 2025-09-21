@@ -10,9 +10,9 @@ export default function Home() {
           This is a simple Next.js application built with TypeScript and Sass.
         </p>
         <div className="home-cta">
-          <Link href="/about" className="btn-primary">
+          {/* <Link href="/about" className="btn-primary">
             Learn More About Us
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Layout>
