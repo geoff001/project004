@@ -1,0 +1,276 @@
+// Main Sass file - imports all other stylesheets
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+p {
+  @include body-text;
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+// Layout Components
+.container {
+  @include container;
+}
+
+.section {
+  @include section-padding;
+}
+
+// Header Styles
+.header {
+  background-color: $secondary-color;
+  padding: $spacing-md $spacing-xl;
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  @include flex-center;
+  gap: $spacing-xl;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: $font-weight-medium;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  transition: background-color $transition-normal;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  &.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// Main Content
+.main {
+  flex: 1;
+  min-height: calc(100vh - 140px); // Adjust based on header/footer height
+}
+
+// Footer Styles
+.footer {
+  background-color: $background-light;
+  padding: $spacing-xl;
+  text-align: center;
+  color: $text-light;
+  border-top: 1px solid $border-color;
+}
+
+// Page-specific styles
+.page-container {
+  min-height: 100vh;
+  @include flex-column;
+}
+
+// Home Page Styles
+.home-content {
+  @include flex-column-center;
+  padding: $spacing-3xl $spacing-xl;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.home-title {
+  @include heading-1;
+  margin-bottom: $spacing-lg;
+}
+
+.home-description {
+  @include body-text-large;
+  margin-bottom: $spacing-2xl;
+  max-width: 600px;
+}
+
+.home-cta {
+  margin-top: $spacing-xl;
+}
+
+.btn-primary {
+  @include button-primary;
+}
+
+.btn-secondary {
+  @include button-secondary;
+}
+
+// About Page Styles
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-2xl;
+}
+
+.about-title {
+  @include heading-1;
+  text-align: center;
+  margin-bottom: $spacing-2xl;
+}
+
+.about-description {
+  @include body-text-large;
+  text-align: center;
+  margin-bottom: $spacing-2xl;
+}
+
+.about-section {
+  margin-bottom: $spacing-2xl;
+}
+
+.section-title {
+  @include heading-3;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: $spacing-sm;
+  margin-bottom: $spacing-lg;
+}
+
+.section-text {
+  @include body-text;
+  margin-bottom: $spacing-md;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    background-color: $background-light;
+    padding: $spacing-md;
+    margin-bottom: $spacing-sm;
+    border-radius: $border-radius-lg;
+    border-left: 4px solid $primary-color;
+    font-size: $font-size-lg;
+    color: $text-color;
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.about-cta {
+  text-align: center;
+  margin-top: $spacing-2xl;
+}
+
+// Dark mode styles
+@include dark-mode {
+  body {
+    background-color: $background-dark;
+    color: white;
+  }
+  
+  .header {
+    background-color: $background-dark;
+  }
+  
+  .footer {
+    background-color: $background-dark;
+    color: #ccc;
+    border-top-color: $border-dark;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+  
+  .home-title,
+  .about-title,
+  .section-title {
+    color: white;
+  }
+  
+  .home-description,
+  .about-description,
+  .section-text {
+    color: #ccc;
+  }
+  
+  .tech-list li {
+    background-color: #2a2a2a;
+    color: white;
+  }
+}
+
+// Responsive Design
+@include mobile {
+  .nav {
+    gap: $spacing-md;
+  }
+  
+  .home-content {
+    padding: $spacing-2xl $spacing-md;
+  }
+  
+  .about-content {
+    padding: $spacing-xl $spacing-md;
+  }
+  
+  .home-title {
+    font-size: $font-size-4xl;
+  }
+  
+  .about-title {
+    font-size: $font-size-4xl;
+  }
+}
